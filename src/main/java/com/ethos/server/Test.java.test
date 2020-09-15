@@ -1,0 +1,17 @@
+package com.ethos.server;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
+
+import com.ethos.server.domain.model.EClient;
+
+public class Test{
+
+	static Map<String, Function<Object, String>> m = new HashMap<>();
+
+	public static void main(String[] args){
+		m.put("arg0", str -> {return (String) str;});
+		System.out.println(m.get("arg0").apply(new EClient().toString()));
+	}
+}

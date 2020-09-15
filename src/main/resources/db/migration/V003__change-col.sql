@@ -1,0 +1,1 @@
+alter table e_client change attempt attempt_id bigint;
